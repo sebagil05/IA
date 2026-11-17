@@ -1,0 +1,92 @@
+ PROMPT MAESTRO COMPLETO: Medellín Explora – Plataforma Web & Móvil de Turismo y Experiencias
+Eres un diseñador y desarrollador frontend experto en UI/UX y Tailwind CSS. Tu objetivo es crear la plataforma completa "Medellín Explora", un ecosistema digital para el descubrimiento, reserva y gestión de experiencias turísticas, comunitarias y nocturnas en Medellín y el Valle de Aburrá (Colombia).
+
+---
+
+### 1. INFORMACIÓN GENERAL Y PROPUESTA DE VALOR
+- Nombre del Producto: Medellín Explora
+- Lema / Tagline: "Tu pasaporte a miradores mágicos, chivas con sabor paisa, café de altura y senderos verdes."
+- Público Objetivo: Viajeros nacionales e internacionales, turistas de aventura y habitantes locales que buscan planes auténticos en el Valle de Aburrá.
+- Enfoque: Turismo experiencial, seguro, respaldado por guías locales verificados y bajo normativas de turismo oficial (RNT y MinCIT Colombia).
+- Idioma y Localización: Español (con términos y expresiones culturales paisas auténticas y respetuosas), moneda oficial en Pesos Colombianos ($ COP).
+
+---
+
+### 2. SISTEMA DE DISEÑO (DESIGN SYSTEM)
+- Tipografía: Plus Jakarta Sans (interfaz moderna, geométrica y con alta legibilidad en pantallas táctiles y escritorio).
+- Paleta de Colores:
+  * Color Primario (Verde Esmeralda Paisa): #059669 / #047857 (representa las montañas, ecoturismo y confianza).
+  * Color Acento / Conversión (Naranja Atardecer / Chiva): #EA580C / #F97316 (utilizado para CTAs principales, ofertas y botones de compra).
+  * Colores de Superficie Claro: Fondo general #FFF8F5 / #FCF2EB con tarjetas en blanco #FFFFFF y bordes sutiles #E2D8D2.
+  * Colores de Superficie Modo Nocturno: #0F172A (azul noche profundo) con acentos de luces cálidas #F59E0B y neón para el mapa nocturno y chivas rumberas.
+- Formas y Componentes:
+  * Bordes redondeados consistentes (rounded-xl y rounded-2xl).
+  * Botones con feedback táctil y sombras suaves (shadow-sm, shadow-md).
+  * Chips y píldoras interactivas con iconos vectoriales integrados.
+  * Badges de confianza institucional: Bandera "🇨🇴 Valle de Aburrá Oficial", "🛡️ RNT 94218" y "⭐ 4.9 Viajeros".
+
+---
+
+### 3. ARQUITECTURA DE PANTALLAS Y FLUJOS (16 PANTALLAS)
+
+#### FASE A: ENTRADA, AUTENTICACIÓN Y ONBOARDING
+1. Bienvenida & Splash Screen:
+   - Hero inmersivo fotográfico con vista panorámica del Valle de Aburrá al anochecer.
+   - Píldoras de experiencias imperdibles (Miradores & Fogatas, Chivas & Tradición, Acceso Inmediato QR).
+   - Acceso principal con botón destacado "Comenzar Ahora (+$15.000 COP bono bienvenida)", botón secundario "Ya tengo cuenta • Iniciar Sesión" y enlace "Explorar como invitado".
+2. Iniciar Sesión (Login):
+   - Opciones sociales de un toque (Google, Apple) y credenciales por correo electrónico o número celular.
+   - Acceso biométrico rápido (Face ID / Huella), enlace para recuperar contraseña y link a registro.
+3. Crear Cuenta / Registro Gratis:
+   - Selector de rol: "¿Vienes a explorar o eres anfitrión/guía local?".
+   - Campos de registro con validación de WhatsApp para envío de tiquetes QR sin conexión.
+   - Banner de bono de bienvenida y confirmación de términos de turismo seguro.
+4. Onboarding de Intereses & Preferencias:
+   - Selección interactiva multi-tag (Miradores, Senderismo Arví, Chivas Rumberas, Café de Altura, Gastronomía & Cantinas, Fogatas).
+   - Selector de nivel de exigencia física (Paseo relajado, Moderado, Aventura extrema).
+
+#### FASE B: EXPLORACIÓN, BÚSQUEDA Y MAPAS GEOESPACIALES
+5. Home Principal (Inicio):
+   - Header superior con selector de idioma (ES/EN), buscador rápido contextual y notificaciones.
+   - Barra de búsqueda extendida: Fecha, zona (El Poblado, Laureles, Centro, San Félix, Santa Elena) y número de cupos.
+   - Carrusel de historias/destacados del día y cuadrícula de tarjetas de experiencias recomendadas.
+   - Barra de navegación inferior móvil (5 tabs: Explorar, Mapa, Publicar +, Reservas, Perfil).
+6. Resultados de Búsqueda (Formato Lista):
+   - Listado ordenable por precio, popularidad o cercanía.
+   - Tarjetas con fotografía 16:9, calificación en estrellas, duración, precio en $ COP, cupos restantes y botón de acceso rápido.
+7. Filtros Avanzados:
+   - Modal/Stack con filtros por rango de precio con slider interactivo, franja horaria (Mañana, Tarde de atardecer, Noche bohemia), transporte incluido y pet-friendly.
+8. Mapa Interactivo de Experiencias (Modo Diurno):
+   - Vista en mapa con pines personalizados por categoría, selector de radio en kilómetros y tarjeta flotante inferior (preview card) con CTA "Ver Detalle".
+9. Mapa Nocturno y Ruta de Luces:
+   - Versión en tema oscuro con visualización de los mejores miradores nocturnos de Medellín, corredores de alumbrados navideños/luces y rutas seguras monitoreadas.
+
+#### FASE C: DETALLES DE TOURS Y EXPERIENCIAS INSIGNIA
+10. Detalle de Experiencia: Atardecer & Fogata en Mirador San Félix / Parque Arví:
+    - Galería fotográfica inmersiva, badge de experiencia verificada y resumen de valoraciones.
+    - Itinerario paso a paso con horarios precisos, punto de encuentro en estación de MetroCable y lista de lo que incluye (chocolate caliente, guía, seguro).
+    - Barra inferior fija de reserva con precio por persona y botón CTA "Reservar Cupo →".
+11. Detalle de Tour: Ruta de Luces y Chivas Rumberas:
+    - Experiencia colectiva festiva con recorrido en chiva tradicional, música en vivo y paradas en miradores icónicos.
+12. Detalle de Tour: Cantinas Históricas, Tango y Fogón Paisa:
+    - Recorrido nocturno cultural y gastronómico (+18 años) visitando Salón Málaga, cantinas patrimoniales de Guayaquil y terraza tanguera en Manrique La 45.
+    - Opciones de entradas: "Boleto Cantinero Clásico" y "Mesa de Honor VIP".
+
+#### FASE D: CHECKOUT, TICKETING Y GESTIÓN DE USUARIO
+13. Checkout y Reserva Final:
+    - Selector de número de viajeros con desglose transparente de tarifa e impuestos locales.
+    - Pasarela de pago integrada (tarjetas, PSE, Nequi, Daviplata, Wompi) y política de cancelación flexible.
+14. Confirmación Exitosa & Tiquete Digital QR:
+    - Pase de abordar digital con código QR dinámico de alta resolución para escanear en el bus/punto de encuentro.
+    - Botones de acción: "Descargar PDF", "Guardar en Apple/Google Wallet" y detalles de contacto del guía asignado.
+15. Crear Evento / Experiencia (Panel para Anfitriones y Guías Locales):
+    - Flujo guiado de publicación: Datos de la actividad, itinerario, fijación del punto de encuentro en mapa, precio por cupo y carga de documentos de guía oficial.
+16. Mis Reservas & Perfil de Usuario:
+    - Billetera digital con tiquetes activos (modo offline), historial de aventuras completadas, gestión de reseñas y configuración de perfil.
+
+---
+
+### 4. REQUERIMIENTOS TÉCNICOS DE IMPLEMENTACIÓN
+- Estructura: Código modular con HTML5 semántico y clases de utilidad de Tailwind CSS.
+- Responsividad: Estrategia Mobile-First (óptimo a 390px–420px de ancho) con capacidad de escala fluida a tablets y escritorios (1440px+).
+- Accesibilidad: Contraste WCAG AA verificado en todos los textos sobre fondos claros y oscuros, botones táctiles con área mínima de 44x44px.
